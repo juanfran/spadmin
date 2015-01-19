@@ -1,0 +1,15 @@
+sp-admin-messages {
+  .wrapper {
+    left: 0;
+    position: fixed;
+    top: 1rem;
+    width: 100%;
+    z-index: 999;
+  }
+  .container {
+    @include transition(all linear .5s);
+    &.ng-hide {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="form-group" ng-class="{'has-error': form[field.key].$dirty && form[field.key].$invalid}">
+    <label for="">{{field.label}}</label>
+
+    <div class="radio">
+        <label>
+            <input
+                 type="radio"
+                 ng-model="data[field.key]"
+                 name="{{fiel.key}}"
+                 ng-disabled="{{field.disabled}}"
+                 ng-readonly="{{field.readonly}}"
+                 ng-change="field.validation().change"
+                 value="{{field.choices[0].value}}"
+                 checked="{{field.choices[0].checked}}"
+                 />
+            {{field.choices[0].label}}
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input
+                 type="radio"
+                 ng-model="data[field.key]"
+                 name="{{field.key}}"
+                 ng-disabled="{{field.disabled}}"
+                 ng-readonly="{{field.readonly}}"
+                 ng-change="field.validation().change"
+                 value="{{field.choices[1].value}}"
+                 checked="{{field.choices[1].checked}}"
+                 />
+            {{field.choices[1].label}}
+        </label>
+    </div>
+
+</div>

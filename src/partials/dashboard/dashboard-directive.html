@@ -1,0 +1,11 @@
+<div class="row dashboard-module">
+    <table class="table table-condensed">
+        <tr ng-repeat="entity in ::dashboard">
+            <td class="col-md-10">{{::entity.title}}</td>
+            <td class="col-md-2 actions">
+                <a class="glyphicon glyphicon-list" ui-sref="list({entityName: entity.name, page: 1})"></a>
+                <a ng-if="entity.add" ui-sref="add({entityName: entity.name})" class="glyphicon glyphicon-plus" href=""></a>
+            </td>
+        </tr>
+    </table>
+</div>

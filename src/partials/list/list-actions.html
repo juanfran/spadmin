@@ -1,0 +1,6 @@
+<div class="actions">
+    <select class="form-control" ng-options="action as action.label for action in entity.list.actions " ng-model="action">
+        <option selected value="">Actions</option>
+    </select>
+    <button ng-click="update()" class="btn btn-primary">Go!</button>
+</div>

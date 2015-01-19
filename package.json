@@ -1,0 +1,32 @@
+{
+  "author": "Juan Francisco Alcántara",
+  "name": "spAdmin",
+  "license": "MIT",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "gulp": "^3.8.8",
+    "gulp-angular-templatecache": "^1.4.2",
+    "gulp-cached": "^1.0.1",
+    "gulp-concat": "^2.4.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-ng-annotate": "^0.4.2",
+    "gulp-plumber": "^0.6.6",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-scss-lint": "^0.1.4",
+    "gulp-sourcemaps": "^1.2.7",
+    "gulp-traceur": "^0.14.0",
+    "karma": "^0.12.24",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-mocha": "^0.1.9",
+    "karma-sinon": "^1.0.3",
+    "mocha": "^2.0.1",
+    "run-sequence": "^1.0.1",
+    "sinon": "^1.11.1",
+    "traceur": "0.0.74",
+    "angular-mocks": "^1.3.5",
+    "karma-sourcemap-loader": "^0.3.0"
+  }
+}

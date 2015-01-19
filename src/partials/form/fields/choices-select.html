@@ -1,0 +1,9 @@
+<div class="form-group" ng-class="{'has-error': form[field.key].$dirty && form[field.key].$invalid}">
+    <label for="{{field.key}}">{{field.label}}</label>
+    <ui-select multiple ng-model="data[field.key]" theme="bootstrap" ng-readonly="{{field.readonly}}" ng-disabled="{{field.disabled}}">
+        <ui-select-match placeholder="Select person...">{{$item.label}}</ui-select-match>
+        <ui-select-choices repeat="option.value as option in field.choices | propsFilter: {label: $select.search}">
+            <div ng-bind-html="option.label | highlight: $select.search"></div>
+        </ui-select-choices>
+    </ui-select>
+</div>

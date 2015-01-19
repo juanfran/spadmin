@@ -1,0 +1,2 @@
+<a class="label" ng-class="::{'label-success': field.value, 'label-danger': !field.value}" ui-sref="edit({entityName: entity.name, id: entity.identifier})" ng-if="::field.config.link">{{::field.value}}</a>
+<span class="label" ng-class="::{'label-success': field.value, 'label-danger': !field.value}" ng-if="::!field.config.link">{{::field.value}}</span>

@@ -1,0 +1,17 @@
+<div class="container">
+    <sp-admin-login>
+        <form name="form" ng-submit="login(credentials)" novalidate>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input class="form-control" type="text" required id="username" ng-model="credentials.username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" requried id="password" ng-model="credentials.password">
+            </div>
+
+            <button type="submit" ng-disabled="form.$invalid  || !form.$dirty" class="btn btn-primary">Login</button>
+        </form>
+    </sp-admin-login>
+</div>

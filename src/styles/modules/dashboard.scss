@@ -1,0 +1,16 @@
+.dashboard-module {
+  margin: 0 auto;
+  width: 500px;
+  a {
+    color: $black;
+  }
+  tr td:first-child {
+    font-weight: bold;
+  }
+  .actions {
+    text-align: center;
+    a:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

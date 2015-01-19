@@ -1,0 +1,9 @@
+<div class="form-group" ng-class="{'has-error': form[field.key].$dirty && form[field.key].$invalid}">
+    <label for="{{field.key}}">{{field.label}}</label>
+    <select ng-readonly="{{field.readonly}}" ng-disabled="{{field.disabled}}" class="form-control" name="{{field.key}}" ng-required="field.validation().required" ng-model="data[field.key]">
+        <option value="">select a value</option>
+        <option ng-repeat="choice in field.choices" value="{{choice.value}}" ng-selected="data[field.key] == choice.value">
+            {{ choice.label }}
+        </option>
+    </select>
+</div>

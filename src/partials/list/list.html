@@ -1,0 +1,33 @@
+<header>
+    <h1>{{::title}}</h1>
+    <div class="action">
+        <a ng-if="entity.add" ui-sref="add({entityName: entity.name})" class="btn btn-primary">Add</a>
+    </div>
+</header>
+
+<table class="table table-bordered">
+    <thead sp-admin-list-head>
+        <tr>
+            <th></th>
+            <th ng-click="sort(th)" ng-class="{'sortable': th.sortable}" ng-repeat="th in listHead">
+                {{::th.label}}
+                <span ng-if="th.order === 'asc'" class="glyphicon glyphicon-chevron-up"></span>
+                <span ng-if="th.order === 'desc'" class="glyphicon glyphicon-chevron-down"></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in ::list">
+            <td><input ng-model="item.checked" type="checkbox" /> {{item.entity.id}}</td>
+            <td ng-repeat="field in ::item.fields">
+                <sp-admin-list-field field="::field" entity="::item.entity"></sp-admin-list-field>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<sp-admin-list-actions></sp-admin-list-actions>
+
+<div ng-if="pagination.total > pagination.itemsPerPage">
+    <pagination total-items="pagination.total" ng-model="pagination.currentPage" max-size="10" items-per-page="::pagination.itemsPerPage" class="pagination-sm" boundary-links="true"></pagination>
+</div>

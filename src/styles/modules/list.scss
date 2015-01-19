@@ -1,0 +1,26 @@
+sp-admin-list {
+  sp-admin-list-actions {
+    display: block;
+  }
+  .sortable {
+    cursor: pointer;
+  }
+  header {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding-bottom: 2rem;
+    h1 {
+      margin: 0;
+    }
+  }
+  .actions {
+    @include display(flex);
+    select {
+      @include display(flex);
+      @include flex-grow(0);
+      margin-right: 1rem;
+      width: auto;
+    }
+  }
+}

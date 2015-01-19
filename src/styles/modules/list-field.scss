@@ -1,0 +1,10 @@
+sp-admin-list-field {
+  .field-array {
+    span {
+      margin-right: .5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

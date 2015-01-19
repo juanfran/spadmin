@@ -1,0 +1,9 @@
+.form-header {
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+  padding-bottom: 2rem;
+  h1 {
+    margin: 0;
+  }
+}

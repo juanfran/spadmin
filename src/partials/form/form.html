@@ -1,0 +1,14 @@
+<div class="form-header">
+    <h1>{{::title}}</h1>
+    <div class="action">
+        <a class="btn btn-default" ui-sref="list({entityName: entity.name, page: 1})">Back to list</a>
+        <a ng-if="deleteBtn" ng-click="deleteElement()" class="btn btn-danger" href="">Delete</a>
+    </div>
+</div>
+<form name="form" novalidate>
+    <div ng-repeat="field in ::fields">
+        <sp-admin-form-field></sp-admin-form-field>
+    </div>
+
+    <button ng-click="save()" ng-disabled="form.$invalid  || !form.$dirty" class="btn btn-primary">Save</button>
+</form>
